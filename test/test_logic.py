@@ -3,7 +3,6 @@ import pandas as pd
 from PyPGDBE.PHREEQC_databasehelper import DatabaseSearcher
 
 def test_search_functionality():
-    # 가짜 데이터 생성
     ss_df = pd.DataFrame({'equation': ['H2O = H+ + OH-']})
     sms_df = pd.DataFrame({'species': ['H+']})
     phase_df = pd.DataFrame({'phase_name': ['Calcite']})
