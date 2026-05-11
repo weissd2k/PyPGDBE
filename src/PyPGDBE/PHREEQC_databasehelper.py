@@ -12,7 +12,7 @@ from .build_database import utils as ut
 import importlib.resources as pkg_resources
 
 # get databases folder from build_database
-database_list = pkg_resources.files('src.PyPGDBE.build_database.databases')
+database_list = pkg_resources.files('PyPGDBE.build_database.databases')
 database_list = ut.phreeqc_database_list(database_list)
 
 # create and normalize Solution Species table
