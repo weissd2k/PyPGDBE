@@ -103,6 +103,38 @@ class SearchPageBase(tk.Frame):
 
     # function to perform the actual search
     def perform_search(self):
+        """
+        Perform search based on user query and display results in treeview.
+
+        Retrieves the search query from the entry field, executes the search
+        using the DatabaseSearcher with the specified category and exact match
+        option, and populates the treeview with the results. If no results are
+        found, displays an informational message box.
+
+        The treeview columns are dynamically configured based on the result
+        DataFrame, with sortable headings. Each row is inserted into the
+        treeview for display.
+
+        Parameters
+        ----------
+        None
+
+        Returns
+        -------
+        None
+
+        Attributes
+        ----------
+        result_df : pandas.DataFrame
+            Stores the resulting DataFrame from the search.
+        tree : ttk.Treeview
+            The treeview widget updated with search results.
+
+        Notes
+        -----
+        This method modifies the GUI state by updating the treeview and
+        storing the result DataFrame for potential export.
+        """
         query = self.entry.get().strip()
         self.result_df = self.searcher.search(self.category, query, self.exact_var.get())
         

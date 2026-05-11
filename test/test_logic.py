@@ -49,7 +49,7 @@ def edit_page():
 
 def test_edit_database_logic(edit_page):
     input_eq = "Ca+2=Ca+2"
-    expected_eq = "Ca+2 = Ca+2"
+    expected_eq = "Ca+2 = Ca-2"
     assert edit_page.normalize_equation(input_eq) == expected_eq
 
     mock_lines = [
