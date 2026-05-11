@@ -90,6 +90,10 @@ These files can be further processed, filtered, or plotted using your preferred 
 
 ---
 
+### ⚠️ Current Limitations
+* **Single Value Entry Only:** For now, the GUI is designed to add one value at a time. Multi-value or bulk additions are not yet supported and will be considered for future updates.
+
+---
 ## Citation
 
 If you use **PHREEQC Database Helper** in your work, please consider citing the corresponding JOSS paper (once published) as described here:
